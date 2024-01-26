@@ -3,7 +3,7 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/auth/src",
   "prefix": "bims",
-  "tags": ["type:shared-lib"],
+  "tags": ["type:feature", "scope:shared"],
   "projectType": "library",
   "targets": {
     "test": {
