@@ -15,8 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@bims/auth": ["libs/auth/src/index.ts"],
-      "@bims/ui-kit": ["libs/ui-kit/src/index.ts"]
+      "@bims/auth": ["libs/auth/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
