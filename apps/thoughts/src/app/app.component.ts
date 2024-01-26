@@ -7,7 +7,6 @@ import { HeaderComponent } from '@bims/ui-kit';
   imports: [RouterModule, HeaderComponent],
   selector: 'bims-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'thoughts';
