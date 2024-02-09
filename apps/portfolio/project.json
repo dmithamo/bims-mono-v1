@@ -53,7 +53,9 @@
           "buildTarget": "portfolio:build:production"
         },
         "development": {
-          "buildTarget": "portfolio:build:development"
+          "buildTarget": "portfolio:build:development",
+          "hmr": true,
+          "port": 4202
         }
       },
       "defaultConfiguration": "development"

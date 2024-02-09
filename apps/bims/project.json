@@ -50,7 +50,9 @@
           "buildTarget": "bims:build:production"
         },
         "development": {
-          "buildTarget": "bims:build:development"
+          "buildTarget": "bims:build:development",
+          "hmr": true,
+          "port": 4201
         }
       },
       "defaultConfiguration": "development"

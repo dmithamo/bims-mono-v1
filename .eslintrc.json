@@ -33,7 +33,8 @@
                 "onlyDependOnLibsWithTags": [
                   "type:feature",
                   "type:util",
-                  "scope:shared"
+                  "scope:shared",
+                  "type:ui"
                 ]
               }
             ]

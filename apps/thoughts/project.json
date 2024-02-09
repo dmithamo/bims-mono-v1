@@ -50,7 +50,9 @@
           "buildTarget": "thoughts:build:production"
         },
         "development": {
-          "buildTarget": "thoughts:build:development"
+          "buildTarget": "thoughts:build:development",
+          "hmr": true,
+          "port": 4203
         }
       },
       "defaultConfiguration": "development"
