@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  theme:{
+  theme: {
     extend: {
       colors: {
         primary: {
@@ -14,7 +14,7 @@ module.exports = {
           dark: '#0369a1',
         },
       },
-    }
+    },
   },
   plugins: [],
 };

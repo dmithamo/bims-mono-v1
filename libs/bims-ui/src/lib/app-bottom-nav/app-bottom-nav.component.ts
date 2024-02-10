@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   templateUrl: './app-bottom-nav.component.html',
 })
 export class AppBottomNavComponent {
-  @Input({ required: true }) appName: string = ""
+  @Input({ required: true }) appName: string = '';
 }

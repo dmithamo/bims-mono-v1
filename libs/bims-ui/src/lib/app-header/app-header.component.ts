@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   templateUrl: './app-header.component.html',
 })
 export class AppHeaderComponent {
-  @Input({ required: true }) appName: string = ""
+  @Input({ required: true }) appName: string = '';
 }

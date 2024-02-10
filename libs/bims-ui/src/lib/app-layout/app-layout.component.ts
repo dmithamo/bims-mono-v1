@@ -7,13 +7,17 @@ import { AppSidebarComponent } from '../app-sidebar/app-sidebar.component';
 @Component({
   selector: 'bims-app-layout',
   standalone: true,
-  imports: [CommonModule, AppHeaderComponent, AppBottomNavComponent, AppSidebarComponent],
+  imports: [
+    CommonModule,
+    AppHeaderComponent,
+    AppBottomNavComponent,
+    AppSidebarComponent,
+  ],
   templateUrl: './app-layout.component.html',
 })
 export class AppLayoutComponent {
-  @Input({ required: true }) appName: string = ""
+  @Input({ required: true }) appName: string = '';
 
-  sidebarIsOpen = false
-  handleToggleSidebar() { }
+  sidebarIsOpen = false;
+  handleToggleSidebar() {}
 }
-

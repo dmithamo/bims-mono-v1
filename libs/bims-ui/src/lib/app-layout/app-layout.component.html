@@ -1,6 +1,10 @@
 <div class="h-screen flex flex-col">
   <bims-app-header [appName]="appName" />
-  <bims-app-sidebar [appName]="appName" [isOpen]="sidebarIsOpen" [onClose]="handleToggleSidebar" />
+  <bims-app-sidebar
+    [appName]="appName"
+    [isOpen]="sidebarIsOpen"
+    [onClose]="handleToggleSidebar"
+  />
 
   <div class="flex-1">
     <ng-content></ng-content>

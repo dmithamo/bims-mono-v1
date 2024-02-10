@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   templateUrl: './temp-page.component.html',
 })
 export class TempPageComponent {
-  @Input({ required: true }) appName: string = ""
+  @Input({ required: true }) appName: string = '';
 }
