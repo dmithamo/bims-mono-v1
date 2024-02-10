@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { TempPageComponent } from '@bims/bims-ui'
+import { TempPageComponent } from '@bims/bims-ui';
 
 @Component({
   standalone: true,
