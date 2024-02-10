@@ -2,11 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'bims-app-header',
+  selector: 'bims-app-bottom-nav',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './app-header.component.html',
+  templateUrl: './app-bottom-nav.component.html',
 })
-export class AppHeaderComponent {
+export class AppBottomNavComponent {
   @Input({ required: true }) appName: string = ""
 }

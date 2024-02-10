@@ -1,0 +1,9 @@
+<div class="h-screen flex flex-col">
+  <bims-app-header [appName]="appName" />
+
+  <div class="flex-1">
+    <ng-content></ng-content>
+  </div>
+
+  <bims-app-bottom-nav [appName]="appName" />
+</div>
