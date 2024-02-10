@@ -1,1 +1,1 @@
-export * from './lib/temp-page.component';
+export * from './temp-page/temp-page.component';

@@ -6,7 +6,6 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './temp-page.component.html',
-  styleUrl: './temp-page.component.css',
 })
 export class TempPageComponent {
   @Input({ required: true }) appName: string = ""
