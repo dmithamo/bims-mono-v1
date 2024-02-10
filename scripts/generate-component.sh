@@ -9,13 +9,19 @@ if [[ -z "$COMPONENT_NAME" ]]; then
   exit 1
 fi
 
-COMPONENT_DIR="libs/bims-ui/src/lib"
+COMPONENT_DIR="libs/bims-ui/src"
+
+# Check if component directory already exists
+if [[ -d "${COMPONENT_DIR}/lib/${COMPONENT_NAME}" ]]; then
+  echo "Error: Component directory already exists."
+  exit 1
+fi
 
 # Generate component using Nx shell
-nx g @nrwl/angular:component $COMPONENT_NAME --directory "$COMPONENT_DIR/$COMPONENT_NAME"
+nx g @nrwl/angular:component $COMPONENT_NAME --directory "${COMPONENT_DIR}/lib/${COMPONENT_NAME}"
 
 # Check if component directory exists
-if [[ ! -d "$COMPONENT_DIR/$COMPONENT_NAME" ]]; then
+if [[ ! -d "${COMPONENT_DIR}/lib/${COMPONENT_NAME}" ]]; then
   echo "Error: Component directory not found. Generation might have failed."
   exit 1
 fi
@@ -30,6 +36,6 @@ if [[ ! -f "$INDEX_FILE" ]]; then
 fi
 
 # Add export statement for the newly created component
-echo "export * from './${COMPONENT_NAME}.component';" >> "$INDEX_FILE"
+echo "export * from './lib/${COMPONENT_NAME}/${COMPONENT_NAME}.component';" >> "$INDEX_FILE"
 
 echo "Component '${COMPONENT_NAME}' generated and exported successfully!"
