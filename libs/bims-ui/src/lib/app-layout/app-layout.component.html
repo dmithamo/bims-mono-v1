@@ -1,5 +1,8 @@
 <div class="h-screen flex flex-col">
-  <bims-app-header [appName]="appName" />
+  <bims-app-header [appName]="appName">
+    <ng-content app-logo></ng-content>
+  </bims-app-header>
+
   <bims-app-sidebar
     [appName]="appName"
     [isOpen]="sidebarIsOpen"
@@ -7,7 +10,7 @@
   />
 
   <div class="flex-1">
-    <ng-content></ng-content>
+    <ng-content select="[body]"></ng-content>
   </div>
 
   <bims-app-bottom-nav [appName]="appName" />
