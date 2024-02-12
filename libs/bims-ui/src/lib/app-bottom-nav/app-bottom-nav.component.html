@@ -1,15 +1,15 @@
 @if(appNavItems.length > 1){
 <nav
-  class="h-fit flex items-center justify-between sm:gap-16 bg-bgcolor-light w-full fixed bottom-0 text-xs"
+  class="h-16 flex items-center justify-between sm:gap-16 bg-bgcolor-light w-full fixed bottom-0 text-sm px-6"
 >
   @for(navItem of appNavItems; track navItem.href){
   <a
     [routerLink]="navItem.href"
-    class="flex flex-col items-center gap-2 p-4 w-24"
-    routerLinkActive="font-bold text-link"
+    class="flex flex-col items-center gap-1 2-fit opacity-80"
+    routerLinkActive="font-bold text-link-dark opacity-100"
     [routerLinkActiveOptions]="{ exact: true }"
   >
-    <span>Icon here</span>
+    <span class="material-symbols-outlined text-md">{{ navItem.icon }}</span>
     <span>{{ navItem.label }}</span>
   </a>
   }

@@ -1,11 +1,17 @@
 <header
-  class="h-20 flex items-center justify-between px-4 py-2 shadow bg-bgcolor-light"
+  class="h-20 flex items-center justify-between bg-bgcolor-light w-full px-6"
 >
-  <ng-content select="[app-logo]" />
+  <a routerLink="/">
+    <ng-content select="[app-logo]" />
+  </a>
 
-  <div class="flex items-center gap-4">
-    <span class="text-link">Search</span>
-    <span class="text-link-light">D Mithamo</span>
-    <span class="text-link-dark">Notifications</span>
+  <div class="flex items-center gap-8 select-none">
+    <span class="material-symbols-outlined cursor-pointer hover:text-link-dark"
+      >search</span
+    >
+    <span class="cursor-pointer hover:text-link-dark">D Mithamo</span>
+    <span class="material-symbols-outlined cursor-pointer hover:text-link-dark"
+      >notifications</span
+    >
   </div>
 </header>

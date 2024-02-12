@@ -4,7 +4,7 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          light: '#000000',
+          light: '#00000080',
           DEFAULT: '#000000',
         },
         link: {
@@ -13,7 +13,7 @@ module.exports = {
           dark: '#0f766e',
         },
         bgcolor: {
-          light: '#ffffff95',
+          light: '#ffffff',
           DEFAULT: '#f8f4ee',
           dark: '#f8f4ee',
         },

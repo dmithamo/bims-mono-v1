@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 import { type AppPermission } from '@bims/bims-auth';
 import {
   AppHeaderComponent,
@@ -13,6 +13,7 @@ import { ThoughtsLogoComponent } from './ui/thoughts-logo/thoughts-logo.componen
 @Component({
   standalone: true,
   imports: [
+    RouterLink,
     TempPageComponent,
     AppLayoutComponent,
     AppHeaderComponent,
