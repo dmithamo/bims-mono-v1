@@ -18,6 +18,6 @@ import { AppSidebarComponent } from '../app-sidebar/app-sidebar.component';
 export class AppLayoutComponent {
   @Input({ required: true }) appName: string = '';
 
-  sidebarIsOpen = false;
-  handleToggleSidebar() {}
+  isSidebarOpen = false;
+  toggleSidebarOpen() {}
 }

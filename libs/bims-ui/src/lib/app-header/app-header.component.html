@@ -1,11 +1,11 @@
-<header class="h-20 flex items-center justify-between px-4 py-2 shadow">
+<header
+  class="h-20 flex items-center justify-between px-4 py-2 shadow bg-bgcolor-light"
+>
+  <ng-content select="[app-logo]" />
+
   <div class="flex items-center gap-4">
-    <span>=</span>
-    <ng-content select="[app-logo]" />
-  </div>
-  <div class="flex items-center gap-4">
-    <span> Search</span>
-    <span> D Mithamo</span>
-    <span>Notifications</span>
+    <span class="text-link">Search</span>
+    <span class="text-link-light">D Mithamo</span>
+    <span class="text-link-dark">Notifications</span>
   </div>
 </header>

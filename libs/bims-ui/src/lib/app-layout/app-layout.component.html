@@ -1,13 +1,13 @@
-<div class="h-screen flex flex-col">
+<div class="h-screen flex flex-col bg-bgcolor text-primary">
   <bims-app-header [appName]="appName">
     <ng-content app-logo></ng-content>
   </bims-app-header>
 
-  <bims-app-sidebar
+  <!-- <bims-app-sidebar
     [appName]="appName"
-    [isOpen]="sidebarIsOpen"
-    [onClose]="handleToggleSidebar"
-  />
+    [isOpen]="isSidebarOpen"
+    [onClose]="toggleSidebarOpen"
+  /> -->
 
   <div class="flex-1">
     <ng-content select="[body]"></ng-content>
