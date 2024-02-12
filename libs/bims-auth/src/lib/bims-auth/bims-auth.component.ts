@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'bims-auth',
+  selector: 'bims-bims-auth',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './auth.component.html',
-  styleUrl: './auth.component.css',
+  templateUrl: './bims-auth.component.html',
+  styleUrl: './bims-auth.component.css',
 })
-export class AuthComponent {}
+export class BimsAuthComponent {}

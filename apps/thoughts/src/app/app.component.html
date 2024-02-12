@@ -1,5 +1,4 @@
-<bims-app-layout [appName]="title">
+<bims-app-layout [appName]="title" [appNavItems]="appNavItems">
   <bims-thoughts-logo app-logo />
-  <bims-temp-page [appName]="title" body />
+  <router-outlet body></router-outlet>
 </bims-app-layout>
-<router-outlet></router-outlet>

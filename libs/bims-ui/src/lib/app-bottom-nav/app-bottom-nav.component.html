@@ -1,1 +1,17 @@
-<p>app-bottom-nav works!</p>
+@if(appNavItems.length > 1){
+<nav
+  class="h-fit flex items-center justify-between sm:gap-16 bg-bgcolor-light w-full fixed bottom-0 text-xs"
+>
+  @for(navItem of appNavItems; track navItem.href){
+  <a
+    [routerLink]="navItem.href"
+    class="flex flex-col items-center gap-2 p-4 w-24"
+    routerLinkActive="font-bold text-link"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <span>Icon here</span>
+    <span>{{ navItem.label }}</span>
+  </a>
+  }
+</nav>
+}

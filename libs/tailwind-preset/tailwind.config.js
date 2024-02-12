@@ -13,7 +13,7 @@ module.exports = {
           dark: '#0f766e',
         },
         bgcolor: {
-          light: '#ffffff',
+          light: '#ffffff95',
           DEFAULT: '#f8f4ee',
           dark: '#f8f4ee',
         },
