@@ -7,4 +7,5 @@ export enum AppIcon {
   search = 'search',
   notifications = 'notifications',
   ellipsis = 'ellipsis',
+  info = 'info',
 }

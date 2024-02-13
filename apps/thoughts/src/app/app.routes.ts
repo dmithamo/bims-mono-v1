@@ -1,4 +1,5 @@
 import { Route } from '@angular/router';
+import { NotFoundPageComponent } from '@bims/bims-ui';
 
 export const appRoutes: Route[] = [
   {
@@ -35,5 +36,9 @@ export const appRoutes: Route[] = [
       const m = await import('./routes/settings/settings.component');
       return m.SettingsComponent;
     },
+  },
+  {
+    path: '**',
+    component: NotFoundPageComponent,
   },
 ];

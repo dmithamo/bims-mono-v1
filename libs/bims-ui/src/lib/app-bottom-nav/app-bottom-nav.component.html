@@ -9,8 +9,10 @@
     routerLinkActive="text-link-dark opacity-100"
     [routerLinkActiveOptions]="{ exact: true }"
   >
-    <span class="material-symbols-outlined text-md">{{ navItem.icon }}</span>
-    <span>{{ navItem.label }}</span>
+    <span class="material-symbols-outlined text-[18px]">{{
+      navItem.icon
+    }}</span>
+    <span class="text-sm">{{ navItem.label }}</span>
   </a>
   }
 </nav>
