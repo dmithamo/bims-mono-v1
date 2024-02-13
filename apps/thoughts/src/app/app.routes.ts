@@ -3,13 +3,6 @@ import { NotFoundPageComponent } from '@bims/bims-ui';
 
 export const appRoutes: Route[] = [
   {
-    path: 'auth',
-    async loadComponent() {
-      const m = await import('@bims/bims-auth');
-      return m.BimsAuthComponent;
-    },
-  },
-  {
     path: '',
     async loadComponent() {
       const m = await import('./routes/homepage/homepage.component');
