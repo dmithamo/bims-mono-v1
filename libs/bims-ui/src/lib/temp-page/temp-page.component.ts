@@ -9,4 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class TempPageComponent {
   @Input({ required: true }) appName: string = '';
+  getArray() {
+    return new Array(200).fill('dennis b mithamo');
+  }
 }

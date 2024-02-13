@@ -31,7 +31,7 @@ export class AppLayoutComponent implements OnDestroy {
   @Input({ required: true }) appName: string = '';
   @Input({ required: true }) appNavItems: AppNavItem[] = [];
 
-  prevScrollY = 100;
+  prevScrollY = 5000;
   isScrollingDown: WritableSignal<boolean> = signal(false);
   isNavHidden: Signal<boolean> = computed(() => this.isScrollingDown());
 
@@ -42,7 +42,8 @@ export class AppLayoutComponent implements OnDestroy {
   handleScrollEvent = () => {
     const currentScrollY = window.scrollY;
     this.isScrollingDown.set(currentScrollY > this.prevScrollY);
-    this.prevScrollY = currentScrollY;
+    console.log({ currentScrollY, p: this.prevScrollY });
+    this.prevScrollY = currentScrollY > 200 ? currentScrollY : this.prevScrollY;
   };
 
   ngOnDestroy(): void {
