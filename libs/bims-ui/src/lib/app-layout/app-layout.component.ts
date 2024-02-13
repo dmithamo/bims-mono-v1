@@ -1,5 +1,14 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
+import {
+  Component,
+  Inject,
+  Input,
+  OnDestroy,
+  Signal,
+  WritableSignal,
+  computed,
+  signal,
+} from '@angular/core';
 import {
   AppBottomNavComponent,
   AppNavItem,
@@ -18,10 +27,25 @@ import { AppSidebarComponent } from '../app-sidebar/app-sidebar.component';
   ],
   templateUrl: './app-layout.component.html',
 })
-export class AppLayoutComponent {
+export class AppLayoutComponent implements OnDestroy {
   @Input({ required: true }) appName: string = '';
   @Input({ required: true }) appNavItems: AppNavItem[] = [];
 
-  isSidebarOpen = false;
-  toggleSidebarOpen() {}
+  prevScrollY = 100;
+  isScrollingDown: WritableSignal<boolean> = signal(false);
+  isNavHidden: Signal<boolean> = computed(() => this.isScrollingDown());
+
+  constructor(@Inject(DOCUMENT) private _document: Document) {
+    this._document.addEventListener('scroll', this.handleScrollEvent, true);
+  }
+
+  handleScrollEvent = () => {
+    const currentScrollY = window.scrollY;
+    this.isScrollingDown.set(currentScrollY > this.prevScrollY);
+    this.prevScrollY = currentScrollY;
+  };
+
+  ngOnDestroy(): void {
+    window.removeEventListener('scroll', this.handleScrollEvent, true);
+  }
 }

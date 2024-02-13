@@ -1,7 +1,9 @@
-<div class="h-screen flex flex-col bg-bgcolor text-primary">
-  <bims-app-header [appName]="appName">
-    <ng-content app-logo></ng-content>
-  </bims-app-header>
+<div class="h-screen flex flex-col bg-bgcolor text-primary scroll-m-0">
+  <div [ngClass]="{ invisible: isNavHidden() }">
+    <bims-app-header [appName]="appName">
+      <ng-content app-logo></ng-content>
+    </bims-app-header>
+  </div>
 
   <!-- <bims-app-sidebar
     [appName]="appName"
@@ -13,5 +15,7 @@
     <ng-content select="[body]"></ng-content>
   </div>
 
-  <bims-app-bottom-nav [appName]="appName" [appNavItems]="appNavItems" />
+  <div [ngClass]="{ invisible: isNavHidden() }">
+    <bims-app-bottom-nav [appName]="appName" [appNavItems]="appNavItems" />
+  </div>
 </div>
