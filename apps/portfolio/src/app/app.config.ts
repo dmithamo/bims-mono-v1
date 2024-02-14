@@ -1,7 +1,7 @@
-import { ApplicationConfig } from '@angular/core';
+import { type ApplicationConfig } from '@angular/core';
 import {
-  InMemoryScrollingFeature,
-  InMemoryScrollingOptions,
+  type InMemoryScrollingFeature,
+  type InMemoryScrollingOptions,
   provideRouter,
   withInMemoryScrolling,
 } from '@angular/router';
