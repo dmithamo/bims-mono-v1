@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { AppIcon } from '../definitions';
 import { NavService } from '../services/nav.service';
 
@@ -23,10 +23,15 @@ export class AppBottomNavComponent {
   closeIcon = AppIcon.close;
   navDrawerIcon = AppIcon.apps;
 
-  constructor(protected navService: NavService) {}
+  constructor(protected navService: NavService, private router: Router) {}
 
   closeNav() {
     this.navService.toggleNavIsVisible(true);
+  }
+
+  handleLogout() {
+    this.closeNav();
+    this.router.navigate(['/']);
   }
 
   headerItems: AppNavItem[] = [
