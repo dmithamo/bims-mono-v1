@@ -9,9 +9,14 @@
     <span class="material-symbols-outlined cursor-pointer hover:text-link-dark"
       >search</span
     >
-    <span class="cursor-pointer hover:text-link-dark">D Mithamo</span>
-    <span class="material-symbols-outlined cursor-pointer hover:text-link-dark"
-      >notifications</span
+
+    @if(!navService.navIsVisible()){<button
+      (click)="openNav()"
+      class="w-full text-md flex justify-end"
     >
+      <span class="material-symbols-outlined text-[24px]">{{
+        appDrawerIcon
+      }}</span></button
+    >}
   </div>
 </header>

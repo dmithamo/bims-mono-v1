@@ -8,4 +8,8 @@ export enum AppIcon {
   notifications = 'notifications',
   ellipsis = 'ellipsis',
   info = 'info',
+  close = 'close',
+  apps = 'apps',
+  menu = 'menu',
+  avatar = 'account_circle',
 }

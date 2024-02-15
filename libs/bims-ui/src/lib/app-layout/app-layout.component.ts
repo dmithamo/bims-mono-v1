@@ -14,17 +14,11 @@ import {
   AppNavItem,
 } from '../app-bottom-nav/app-bottom-nav.component';
 import { AppHeaderComponent } from '../app-header/app-header.component';
-import { AppSidebarComponent } from '../app-sidebar/app-sidebar.component';
 
 @Component({
   selector: 'bims-app-layout',
   standalone: true,
-  imports: [
-    CommonModule,
-    AppHeaderComponent,
-    AppBottomNavComponent,
-    AppSidebarComponent,
-  ],
+  imports: [CommonModule, AppHeaderComponent, AppBottomNavComponent],
   templateUrl: './app-layout.component.html',
 })
 export class AppLayoutComponent implements OnDestroy {
@@ -42,7 +36,6 @@ export class AppLayoutComponent implements OnDestroy {
   handleScrollEvent = () => {
     const currentScrollY = window.scrollY;
     this.isScrollingDown.set(currentScrollY > this.prevScrollY);
-    console.log({ currentScrollY, p: this.prevScrollY });
     this.prevScrollY = currentScrollY > 200 ? currentScrollY : this.prevScrollY;
   };
 

@@ -1,19 +1,46 @@
-@if(appNavItems.length > 1){
+@if(navService.navIsVisible()){
 <nav
-  class="h-16 flex items-center justify-between sm:gap-16 bg-bgcolor-light w-full fixed bottom-0 text-sm px-6"
+  class="h-full flex flex-col place-items-start gap-10 bg-bgcolor-light shadow w-full sm:w-[400px] fixed top-0 right-0 text-sm p-4 z-10"
 >
-  @for(navItem of appNavItems; track navItem.href){
-  <a
-    [routerLink]="navItem.href"
-    class="flex flex-col items-center gap-1 2-fit opacity-80"
-    routerLinkActive="text-link-dark opacity-100"
-    [routerLinkActiveOptions]="{ exact: true }"
-  >
-    <span class="material-symbols-outlined text-[18px]">{{
-      navItem.icon
-    }}</span>
-    <span class="text-sm">{{ navItem.label }}</span>
-  </a>
-  }
+  <div class="w-full flex place-items-center justify-between sm:justify-end">
+    <h2 class="text-xl uppercase text-link-dark">{{ appName }}</h2>
+    <button (click)="closeNav()" class="py-3">
+      <span class="material-symbols-outlined text-[26px]">{{ closeIcon }}</span>
+    </button>
+  </div>
+
+  <div class="w-full pb-12 flex flex-col gap-10 border-b border-black/5">
+    @for(headerItem of headerItems; track headerItem.href){
+    <a
+      [routerLink]="headerItem.href"
+      class="flex gap-3 opacity-80 capitalize"
+      routerLinkActive="text-link-dark opacity-100"
+      [routerLinkActiveOptions]="{ exact: true }"
+      (click)="closeNav()"
+    >
+      <span class="material-symbols-outlined text-[18px]">{{
+        headerItem.icon
+      }}</span>
+      <span class="text-sm">{{ headerItem.label }}</span>
+    </a>
+    }
+  </div>
+
+  <div class="w-full pb-12 flex flex-col gap-10 border-b border-black/5">
+    @for(navItem of appNavItems; track navItem.href){
+    <a
+      [routerLink]="navItem.href"
+      class="flex gap-3 opacity-80 capitalize"
+      routerLinkActive="text-link-dark opacity-100"
+      [routerLinkActiveOptions]="{ exact: true }"
+      (click)="closeNav()"
+    >
+      <span class="material-symbols-outlined text-[18px]">{{
+        navItem.icon
+      }}</span>
+      <span class="text-sm">{{ navItem.label }}</span>
+    </a>
+    }
+  </div>
 </nav>
 }

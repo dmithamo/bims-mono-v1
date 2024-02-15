@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { AppIcon } from '../definitions';
+import { NavService } from '../services/nav.service';
 
 export type AppNavItem = {
   href: string;
@@ -18,4 +19,26 @@ export type AppNavItem = {
 export class AppBottomNavComponent {
   @Input({ required: true }) appName: string = '';
   @Input({ required: true }) appNavItems: AppNavItem[] = [];
+
+  closeIcon = AppIcon.close;
+  navDrawerIcon = AppIcon.apps;
+
+  constructor(protected navService: NavService) {}
+
+  closeNav() {
+    this.navService.toggleNavIsVisible(true);
+  }
+
+  headerItems: AppNavItem[] = [
+    {
+      href: '/notifications',
+      label: 'notifications',
+      icon: AppIcon.notifications,
+    },
+    {
+      href: '/profile',
+      label: 'profile',
+      icon: AppIcon.avatar,
+    },
+  ];
 }
