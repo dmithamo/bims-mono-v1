@@ -16,7 +16,7 @@
       @for(headerItem of headerItems; track headerItem.href){
       <a
         [routerLink]="headerItem.href"
-        class="flex gap-3 opacity-80 capitalize"
+        class="flex gap-3 opacity-80 capitalize w-fit"
         routerLinkActive="text-link-dark opacity-100"
         [routerLinkActiveOptions]="{ exact: true }"
         (click)="closeNav()"
@@ -33,7 +33,7 @@
       @for(navItem of appNavItems; track navItem.href){
       <a
         [routerLink]="navItem.href"
-        class="flex gap-3 opacity-80 capitalize"
+        class="flex gap-3 opacity-80 capitalize w-fit"
         routerLinkActive="text-link-dark opacity-100"
         [routerLinkActiveOptions]="{ exact: true }"
         (click)="closeNav()"
