@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AuthFormComponent } from './auth-form.component';
+import { SvgIconComponent } from './svg-icon.component';
 
-describe('AuthFormComponent', () => {
-  let component: AuthFormComponent;
-  let fixture: ComponentFixture<AuthFormComponent>;
+describe('SvgIconComponent', () => {
+  let component: SvgIconComponent;
+  let fixture: ComponentFixture<SvgIconComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AuthFormComponent],
+      imports: [SvgIconComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AuthFormComponent);
+    fixture = TestBed.createComponent(SvgIconComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

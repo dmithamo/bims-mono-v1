@@ -1,11 +1,13 @@
 import { Route } from '@angular/router';
-import { AuthFormComponent } from '@bims/bims-auth';
+import { authRoutes } from '@bims/bims-auth';
 import { NotFoundPageComponent } from '@bims/bims-ui';
 
 export const appRoutes: Route[] = [
   {
     path: 'auth',
-    component: AuthFormComponent,
+    loadChildren() {
+      return authRoutes;
+    },
   },
   {
     path: '',

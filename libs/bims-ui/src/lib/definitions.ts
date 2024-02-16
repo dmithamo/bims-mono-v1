@@ -12,4 +12,12 @@ export enum AppIcon {
   apps = 'apps',
   menu = 'menu',
   avatar = 'account_circle',
+  bug = 'bug',
+  send = 'send',
+}
+
+export enum AppIconSize {
+  large = 'large',
+  default = 'default',
+  small = 'small',
 }
