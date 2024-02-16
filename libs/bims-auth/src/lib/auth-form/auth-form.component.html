@@ -1,1 +1,39 @@
-<p class="">auth-form works!</p>
+<div class="h-full flex flex-col px-4 py-8">
+  <div
+    class="bg-bgcolor-light flex flex-col justify-start gap-8 w-full sm:w-[400px] h-[325px] p-6 mx-auto relative shadow rounded"
+  >
+    <div class="flex flex-col place-items-start gap-2 w-full">
+      <h2 class="text-2xl">Sign in to your account</h2>
+    </div>
+
+    <form class="flex flex-col gap-10 w-full">
+      <label
+        for="username"
+        class="flex flex-col gap-1 place-items-start w-full"
+      >
+        <p>Email address or phone number</p>
+        <input
+          name="username"
+          placeholder="email@domain.tld or +2547xxxxxxxx"
+          class="inline-block w-full mt-1 p-3 rounded bg-slate-50 border border-slate-300 focus:bg-white focus:border focus:border-black focus:outline-none disabled:bg-slate-50 invalid:border-red-500 invalid:text-red-500"
+        />
+      </label>
+
+      <button
+        type="submit"
+        class="mt-4 bg-link-dark rounded text-white text-xl py-3 flex items-center justify-evenly gap-4 disabled:bg-slate-300 disabled:cursor-not-allowed"
+      >
+        <span class="uppercase">Sign in</span>
+        <span class="material-symbols-outlined text-[28px]">send</span>
+      </button>
+    </form>
+
+    <div class="text-sm flex flex-col gap-3 absolute bottom-8 opacity-60">
+      <div class="flex gap-2 place-items-center">
+        <span class="">Don't have an account?</span>
+        <button class="underline underline-offset-2">Create one here</button>
+        <span class="">(It's free)</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,7 +4,7 @@ import { NotFoundPageComponent } from '@bims/bims-ui';
 
 export const appRoutes: Route[] = [
   {
-    path: 'auth/login',
+    path: 'auth',
     component: AuthFormComponent,
   },
   {
