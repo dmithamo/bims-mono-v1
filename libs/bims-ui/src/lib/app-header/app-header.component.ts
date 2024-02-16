@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { NavService } from '../services/nav.service';
 import { AppIcon } from '../definitions';
+import { NavService } from '../services/nav.service';
 
 @Component({
   selector: 'bims-app-header',
@@ -19,5 +19,5 @@ export class AppHeaderComponent {
     this.navService.toggleNavIsVisible(false);
   }
 
-  appDrawerIcon = AppIcon.apps;
+  appDrawerIcon = AppIcon.menu;
 }
