@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { BimsAuthComponent } from './bims-auth.component';
+import { AppBottomNavComponent } from './app-nav.component';
 
-describe('BimsAuthComponent', () => {
-  let component: BimsAuthComponent;
-  let fixture: ComponentFixture<BimsAuthComponent>;
+describe('AppBottomNavComponent', () => {
+  let component: AppBottomNavComponent;
+  let fixture: ComponentFixture<AppBottomNavComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BimsAuthComponent],
+      imports: [AppBottomNavComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(BimsAuthComponent);
+    fixture = TestBed.createComponent(AppBottomNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -11,12 +11,12 @@ export type AppNavItem = {
 };
 
 @Component({
-  selector: 'bims-app-bottom-nav',
+  selector: 'bims-app-nav',
   standalone: true,
   imports: [CommonModule, RouterLink, RouterLinkActive],
-  templateUrl: './app-bottom-nav.component.html',
+  templateUrl: './app-nav.component.html',
 })
-export class AppBottomNavComponent {
+export class AppNavComponent {
   @Input({ required: true }) appName: string = '';
   @Input({ required: true }) appNavItems: AppNavItem[] = [];
 

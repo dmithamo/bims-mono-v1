@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AppBottomNavComponent } from './app-bottom-nav.component';
+import { AuthFormComponent } from './auth-form.component';
 
-describe('AppBottomNavComponent', () => {
-  let component: AppBottomNavComponent;
-  let fixture: ComponentFixture<AppBottomNavComponent>;
+describe('AuthFormComponent', () => {
+  let component: AuthFormComponent;
+  let fixture: ComponentFixture<AuthFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppBottomNavComponent],
+      imports: [AuthFormComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AppBottomNavComponent);
+    fixture = TestBed.createComponent(AuthFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

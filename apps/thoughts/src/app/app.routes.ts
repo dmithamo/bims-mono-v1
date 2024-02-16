@@ -1,7 +1,12 @@
 import { Route } from '@angular/router';
+import { AuthFormComponent } from '@bims/bims-auth';
 import { NotFoundPageComponent } from '@bims/bims-ui';
 
 export const appRoutes: Route[] = [
+  {
+    path: 'auth/login',
+    component: AuthFormComponent,
+  },
   {
     path: '',
     async loadComponent() {

@@ -1,45 +1,15 @@
-import { CommonModule, DOCUMENT } from '@angular/common';
-import {
-  Component,
-  Inject,
-  Input,
-  OnDestroy,
-  Signal,
-  WritableSignal,
-  computed,
-  signal,
-} from '@angular/core';
-import {
-  AppBottomNavComponent,
-  AppNavItem,
-} from '../app-bottom-nav/app-bottom-nav.component';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 import { AppHeaderComponent } from '../app-header/app-header.component';
+import { AppNavComponent, AppNavItem } from '../app-nav/app-nav.component';
 
 @Component({
   selector: 'bims-app-layout',
   standalone: true,
-  imports: [CommonModule, AppHeaderComponent, AppBottomNavComponent],
+  imports: [CommonModule, AppHeaderComponent, AppNavComponent],
   templateUrl: './app-layout.component.html',
 })
-export class AppLayoutComponent implements OnDestroy {
+export class AppLayoutComponent {
   @Input({ required: true }) appName: string = '';
   @Input({ required: true }) appNavItems: AppNavItem[] = [];
-
-  prevScrollY = 5000;
-  isScrollingDown: WritableSignal<boolean> = signal(false);
-  isNavHidden: Signal<boolean> = computed(() => this.isScrollingDown());
-
-  constructor(@Inject(DOCUMENT) private _document: Document) {
-    this._document.addEventListener('scroll', this.handleScrollEvent, true);
-  }
-
-  handleScrollEvent = () => {
-    const currentScrollY = window.scrollY;
-    this.isScrollingDown.set(currentScrollY > this.prevScrollY);
-    this.prevScrollY = currentScrollY > 200 ? currentScrollY : this.prevScrollY;
-  };
-
-  ngOnDestroy(): void {
-    window.removeEventListener('scroll', this.handleScrollEvent, true);
-  }
 }
