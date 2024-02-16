@@ -1,6 +1,7 @@
 <button
   [disabled]="isDisabled"
   class="w-full bg-link-dark rounded text-white text-xl py-3 flex place-items-center justify-center gap-6 disabled:bg-slate-300 disabled:cursor-not-allowed"
+  (click)="(onClick)"
   [type]="type"
 >
   <span>{{ label }}</span>

@@ -1,1 +1,40 @@
-<p>register-form works!</p>
+<div class="h-full flex flex-col px-4 py-8">
+  <div
+    class="bg-bgcolor-light flex flex-col justify-start gap-8 w-full sm:w-[400px] h-[325px] p-6 mx-auto shadow rounded-md border border-black/10"
+  >
+    <div class="flex flex-col place-items-start gap-2 w-full">
+      <h2 class="text-2xl">Create a free account</h2>
+    </div>
+
+    <form class="flex flex-col gap-10 w-full">
+      <label
+        for="username"
+        class="flex flex-col gap-1 place-items-start w-full"
+      >
+        <p class="text-sm font-semibold">Email address or phone number</p>
+        <input
+          name="username"
+          placeholder="something@other.com or 07xxxxxxxx"
+          class="inline-block w-full mt-1 p-3 rounded bg-slate-50 border border-slate-300 focus:bg-white focus:border focus:border-black focus:outline-none disabled:bg-slate-50 invalid:border-red-500 invalid:text-red-500"
+        />
+      </label>
+
+      <bims-button
+        [iconName]="submitBtnIconName"
+        [iconSize]="submitBtnIconSize"
+        label="Submit"
+        [onClick]="createAccount"
+        [isDisabled]="false"
+      />
+    </form>
+
+    <div class="text-sm flex flex-col gap-3 mt-6 mb-4 opacity-60">
+      <div class="flex gap-2 place-items-center">
+        <span class="">Already have an account?</span>
+        <a routerLink="/auth/login" class="underline underline-offset-2"
+          >Sign in here</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
