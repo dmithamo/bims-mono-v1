@@ -9,11 +9,15 @@ export const authRoutes: Routes = [
     component: LoginFormComponent,
   },
   {
-    path: 'otp',
+    path: 'login/otp',
     component: OtpFormComponent,
   },
   {
     path: 'register',
     component: RegisterFormComponent,
+  },
+  {
+    path: 'register/otp',
+    component: OtpFormComponent,
   },
 ];
