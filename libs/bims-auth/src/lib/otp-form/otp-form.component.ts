@@ -61,6 +61,9 @@ export class OtpFormComponent {
 
   handlePaste(e: ClipboardEvent) {
     const text = e.clipboardData?.getData('text') || '';
+
+    if (!/^\d+$/.test(text)) return;
+
     const digits = text.split('');
 
     for (let i = 0; i < this.OTP_LENGTH; i++) {
