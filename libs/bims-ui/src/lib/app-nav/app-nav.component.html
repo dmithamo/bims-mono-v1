@@ -17,12 +17,12 @@
       @for(headerItem of headerItems; track headerItem.href){
       <a
         [routerLink]="headerItem.href"
-        class="flex gap-3 opacity-80 capitalize w-fit"
+        class="flex gap-3 items-center opacity-80 capitalize w-fit"
         routerLinkActive="text-link-dark font-semibold opacity-100"
         [routerLinkActiveOptions]="{ exact: true }"
         (click)="closeNav()"
       >
-        <span class="material-symbols-outlined text-[18px]">{{
+        <span class="material-symbols-outlined text-[16px]">{{
           headerItem.icon
         }}</span>
         <span class="">{{ headerItem.label }}</span>
@@ -34,7 +34,7 @@
       @for(navItem of appNavItems; track navItem.href){
       <a
         [routerLink]="navItem.href"
-        class="flex gap-3 opacity-80 capitalize w-fit"
+        class="flex gap-3 items-center opacity-80 capitalize w-fit"
         routerLinkActive="text-link-dark font-semibold opacity-100"
         [routerLinkActiveOptions]="{ exact: true }"
         (click)="closeNav()"
