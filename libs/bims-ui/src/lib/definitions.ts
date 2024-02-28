@@ -17,6 +17,7 @@ export enum AppIcon {
   file = 'file_open',
   folder = 'folder_supervised',
   experience = 'work_history',
+  face = 'mood',
 }
 
 export enum AppIconSize {

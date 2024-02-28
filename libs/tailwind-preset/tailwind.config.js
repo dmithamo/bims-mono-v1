@@ -10,7 +10,7 @@ module.exports = {
         link: {
           light: '#5eead4',
           DEFAULT: '#14b8a6',
-          dark: '#0f766e',
+          dark: '#ff7f50',
         },
         bgcolor: {
           light: '#ffffff',

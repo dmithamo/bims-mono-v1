@@ -25,8 +25,8 @@ export class AppComponent {
   appNavItems: Array<AppNavItem & { permissions: Array<AppPermission> }> = [
     {
       href: '/',
-      label: 'About',
-      icon: AppIcon.home,
+      label: 'About me',
+      icon: AppIcon.face,
       permissions: [],
     },
     {
