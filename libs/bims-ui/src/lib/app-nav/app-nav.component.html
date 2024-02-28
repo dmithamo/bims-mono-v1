@@ -12,6 +12,7 @@
       </button>
     </div>
 
+    @if(headerItems.length){
     <div class="w-full pb-12 flex flex-col gap-10 border-b border-black/5">
       @for(headerItem of headerItems; track headerItem.href){
       <a
@@ -28,7 +29,7 @@
       </a>
       }
     </div>
-
+    } @if(appNavItems.length){
     <div class="w-full pb-12 flex flex-col gap-10 border-b border-black/5">
       @for(navItem of appNavItems; track navItem.href){
       <a
@@ -45,7 +46,7 @@
       </a>
       }
     </div>
-
+    } @if(isAuthenticated){
     <div class="flex-1 flex flex-col justify-end">
       <button
         (click)="handleLogout()"
@@ -55,6 +56,7 @@
         <span>Logout</span>
       </button>
     </div>
+    }
   </nav>
 </div>
 }

@@ -1,2 +1,4 @@
-<bims-temp-page [appName]="title" />
-<router-outlet></router-outlet>
+<bims-app-layout [appName]="title" [appNavItems]="[]">
+  <bims-portfolio-logo app-logo />
+  <router-outlet body />
+</bims-app-layout>

@@ -22,6 +22,7 @@ export class AppNavComponent {
 
   closeIcon = AppIcon.close;
   navDrawerIcon = AppIcon.apps;
+  isAuthenticated = false;
 
   constructor(protected navService: NavService, private router: Router) {}
 
@@ -35,15 +36,15 @@ export class AppNavComponent {
   }
 
   headerItems: AppNavItem[] = [
-    {
-      href: '/notifications',
-      label: 'notifications',
-      icon: AppIcon.notifications,
-    },
-    {
-      href: '/profile',
-      label: 'profile',
-      icon: AppIcon.avatar,
-    },
+    // {
+    //   href: '/notifications',
+    //   label: 'notifications',
+    //   icon: AppIcon.notifications,
+    // },
+    // {
+    //   href: '/profile',
+    //   label: 'profile',
+    //   icon: AppIcon.avatar,
+    // },
   ];
 }
