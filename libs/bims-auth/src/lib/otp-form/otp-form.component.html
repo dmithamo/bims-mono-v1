@@ -4,7 +4,7 @@
   >
     <div class="flex flex-col place-items-start gap-2 w-full">
       <h2 class="text-2xl">Verify your account</h2>
-      <p class="text-sm opacity-75">
+      <p class="opacity-75">
         Enter the one-time password sent to
         <span class="mx-1 underline underline-offset-4">{{
           usernameVisible
@@ -15,7 +15,7 @@
 
     <form class="flex flex-col gap-10 w-full">
       <label for="otp" class="flex flex-col gap-1 place-items-start w-full">
-        <p class="text-sm font-semibold">OTP</p>
+        <p class="font-semibold">OTP</p>
         <div class="w-full flex place-items-center justify-between mt-1">
           @for (_ of getOtpFieldsArray(); track $index) {
           <input
@@ -44,7 +44,7 @@
       />
     </form>
 
-    <div class="text-sm flex flex-col gap-3 mt-6 mb-4 opacity-60">
+    <div class="flex flex-col gap-3 mt-6 mb-4 opacity-60">
       <div class="flex gap-2 place-items-center">
         <span class="">Not received?</span>
         <a routerLink=".." class="underline underline-offset-4"

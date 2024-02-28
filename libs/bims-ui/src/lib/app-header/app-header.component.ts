@@ -12,6 +12,7 @@ import { NavService } from '../services/nav.service';
 })
 export class AppHeaderComponent {
   @Input({ required: true }) appName: string = '';
+  @Input() onSearch?: () => void;
 
   constructor(protected navService: NavService) {}
 

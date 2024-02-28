@@ -14,6 +14,9 @@ export enum AppIcon {
   avatar = 'account_circle',
   bug = 'bug',
   send = 'send',
+  file = 'file_open',
+  folder = 'folder_supervised',
+  experience = 'work_history',
 }
 
 export enum AppIconSize {
