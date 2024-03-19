@@ -26,8 +26,11 @@ export class AppNavComponent {
 
   constructor(protected navService: NavService, private router: Router) {}
 
+  openNav() {
+    this.navService.toggleNavIsVisible({ isOpen: false });
+  }
   closeNav() {
-    this.navService.toggleNavIsVisible(true);
+    this.navService.toggleNavIsVisible({ isOpen: true });
   }
 
   handleLogout() {
@@ -35,16 +38,6 @@ export class AppNavComponent {
     this.router.navigate(['/']);
   }
 
-  headerItems: AppNavItem[] = [
-    // {
-    //   href: '/notifications',
-    //   label: 'notifications',
-    //   icon: AppIcon.notifications,
-    // },
-    // {
-    //   href: '/profile',
-    //   label: 'profile',
-    //   icon: AppIcon.avatar,
-    // },
-  ];
+  appDrawerIcon = AppIcon.menu;
+  headerItems: AppNavItem[] = [];
 }

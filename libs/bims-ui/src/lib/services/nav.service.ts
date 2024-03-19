@@ -7,7 +7,7 @@ export class NavService {
   constructor() {}
 
   public navIsVisible: WritableSignal<boolean> = signal(false);
-  public toggleNavIsVisible(isOpen: boolean) {
+  public toggleNavIsVisible({ isOpen }: { isOpen: boolean }) {
     this.navIsVisible.set(!isOpen);
   }
 }

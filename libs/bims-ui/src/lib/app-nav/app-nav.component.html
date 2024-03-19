@@ -59,4 +59,11 @@
     }
   </nav>
 </div>
-}
+} @if(!navService.navIsVisible() && appNavItems.length>0){<button
+  (click)="openNav()"
+  class="fixed top-4 right-5 w-full text-md flex justify-end"
+>
+  <span class="material-symbols-outlined text-[24px]">{{
+    appDrawerIcon
+  }}</span></button
+>}
