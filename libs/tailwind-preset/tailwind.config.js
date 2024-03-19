@@ -14,8 +14,8 @@ module.exports = {
         },
         bgcolor: {
           light: '#ffffff',
-          DEFAULT: '#f8f4ee',
-          dark: '#f8f4ee',
+          DEFAULT: '#fffff',
+          dark: '#fffff',
         },
       },
       fontSize: {

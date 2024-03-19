@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 export class GhApiService {
   constructor(private http: HttpClient) {}
 
-  get biodata(): Observable<unknown> {
-    return this.http.get('https://jsonplaceholder.typicode.com/todos');
+  get bioData(): Observable<unknown> {
+    return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
 
   get commitGraph() {

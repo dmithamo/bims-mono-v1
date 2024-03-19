@@ -10,13 +10,12 @@ import { GhApiService } from '../../services/gh-api.service';
   templateUrl: './homepage.component.html',
 })
 export class HomepageComponent implements OnInit {
-  biodata: unknown;
+  bioData: unknown;
   constructor(private ghApiService: GhApiService) {}
 
   ngOnInit(): void {
-    this.ghApiService.biodata.subscribe((response) => {
-      console.log(response);
-      this.biodata = JSON.stringify(response, null, 4);
+    this.ghApiService.bioData.subscribe((response) => {
+      this.bioData = JSON.stringify((response as Array<unknown>)[0], null, 4);
     });
   }
 }
