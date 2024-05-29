@@ -3,8 +3,8 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/bims-ui/src",
   "prefix": "bims",
-  "tags": ["scope:shared", "type:ui"],
   "projectType": "library",
+  "tags": ["scope:shared", "type:ui"],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
@@ -31,8 +31,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "executor": "@nx/eslint:lint"
     }
   }
 }
