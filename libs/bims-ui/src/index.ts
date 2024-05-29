@@ -5,3 +5,4 @@ export * from './lib/button/button.component';
 export * from './lib/definitions';
 export * from './lib/not-found-page/not-found-page.component';
 export * from './lib/temp-page/temp-page.component';
+export * from './lib/app-logo/app-logo.component';

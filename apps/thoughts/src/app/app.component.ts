@@ -7,8 +7,8 @@ import {
   AppLayoutComponent,
   TempPageComponent,
   type AppNavItem,
+  AppLogoComponent,
 } from '@bims/bims-ui';
-import { ThoughtsLogoComponent } from './ui/thoughts-logo/thoughts-logo.component';
 
 @Component({
   standalone: true,
@@ -17,7 +17,7 @@ import { ThoughtsLogoComponent } from './ui/thoughts-logo/thoughts-logo.componen
     TempPageComponent,
     AppLayoutComponent,
     AppHeaderComponent,
-    ThoughtsLogoComponent,
+    AppLogoComponent,
     RouterModule,
   ],
   selector: 'bims-root',

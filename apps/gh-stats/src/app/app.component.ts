@@ -2,17 +2,17 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {
   AppLayoutComponent,
+  AppLogoComponent,
   type AppNavItem,
   TempPageComponent,
 } from '@bims/bims-ui';
-import { GhStatsLogoComponent } from './ui/gh-stats-logo/gh-stats-logo.component';
 
 @Component({
   standalone: true,
   imports: [
     AppLayoutComponent,
-    GhStatsLogoComponent,
     TempPageComponent,
+    AppLogoComponent,
     RouterModule,
   ],
   selector: 'bims-root',

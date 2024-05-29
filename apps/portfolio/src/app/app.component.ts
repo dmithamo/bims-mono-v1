@@ -6,15 +6,15 @@ import {
   AppLayoutComponent,
   TempPageComponent,
   type AppNavItem,
+  AppLogoComponent,
 } from '@bims/bims-ui';
-import { PortfolioLogoComponent } from './ui/portfolio-logo/portfolio-logo.component';
 
 @Component({
   standalone: true,
   imports: [
     TempPageComponent,
     AppLayoutComponent,
-    PortfolioLogoComponent,
+    AppLogoComponent,
     RouterModule,
   ],
   selector: 'bims-root',
