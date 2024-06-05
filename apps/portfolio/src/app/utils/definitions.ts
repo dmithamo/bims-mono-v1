@@ -4,11 +4,12 @@ export type TBioData = {
   workedSinceDate: Date;
   ghUsername: string;
   linkedInUsername: string;
+  profilePicHref: string;
 };
 
 export const ROUTES = {
-  aboutMe: '',
+  homepage: '',
   experience: 'experience',
-  cv: 'cv',
+  resume: 'cv',
   projects: 'projects',
 };

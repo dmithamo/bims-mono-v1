@@ -4,7 +4,7 @@ import { ROUTES } from './utils/definitions';
 
 export const appRoutes: Route[] = [
   {
-    path: ROUTES.aboutMe,
+    path: ROUTES.homepage,
     async loadComponent() {
       const m = await import('./routes/homepage/homepage.component');
       return m.HomepageComponent;
@@ -25,7 +25,7 @@ export const appRoutes: Route[] = [
     },
   },
   {
-    path: ROUTES.cv,
+    path: ROUTES.resume,
     async loadComponent() {
       const m = await import('./routes/resume/resume.component');
       return m.ResumeComponent;

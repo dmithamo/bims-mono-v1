@@ -4,8 +4,8 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          light: '#00000080',
-          DEFAULT: '#000000',
+          light: '#00000060',
+          DEFAULT: '#000070',
         },
         link: {
           light: '#5eead4',
@@ -19,7 +19,7 @@ module.exports = {
         },
       },
       fontSize: {
-        base: '11px',
+        base: '12px',
       },
     },
   },

@@ -27,7 +27,7 @@ export class AppComponent {
   title = 'd mithamo';
   appNavItems: Array<AppNavItem & { permissions: Array<AppPermission> }> = [
     {
-      href: ROUTES.aboutMe,
+      href: ROUTES.homepage,
       label: 'About me',
       icon: AppIcon.face,
       permissions: [],
@@ -39,7 +39,7 @@ export class AppComponent {
       permissions: [],
     },
     {
-      href: ROUTES.cv,
+      href: ROUTES.resume,
       label: 'Resume',
       icon: AppIcon.file,
       permissions: [],
