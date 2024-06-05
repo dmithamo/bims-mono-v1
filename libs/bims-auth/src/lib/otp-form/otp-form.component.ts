@@ -18,7 +18,7 @@ export class OtpFormComponent {
 
   submitBtnIconSize: AppIconSize = AppIconSize.large;
   submitBtnIconName: AppIcon = AppIcon.send;
-  username = 'b@dmithamo.dev';
+  username = 'd@dmithamo.dev';
   usernameVisible: string =
     this.username.slice(0, 4) +
     '***' +
