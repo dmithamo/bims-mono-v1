@@ -9,6 +9,7 @@ import {
   AppLogoComponent,
   AppHeaderComponent,
 } from '@bims/bims-ui';
+import { ROUTES } from './utils/definitions';
 
 @Component({
   standalone: true,
@@ -23,28 +24,28 @@ import {
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = 'portfolio';
+  title = 'd mithamo';
   appNavItems: Array<AppNavItem & { permissions: Array<AppPermission> }> = [
     {
-      href: '/',
+      href: ROUTES.aboutMe,
       label: 'About me',
       icon: AppIcon.face,
       permissions: [],
     },
     {
-      href: '/experience',
+      href: ROUTES.experience,
       label: 'Experience',
       icon: AppIcon.experience,
       permissions: [],
     },
     {
-      href: '/resume.pdf',
+      href: ROUTES.cv,
       label: 'Resume',
       icon: AppIcon.file,
       permissions: [],
     },
     {
-      href: '/projects',
+      href: ROUTES.projects,
       label: 'Projects',
       icon: AppIcon.folder,
       permissions: [],

@@ -1,20 +1,24 @@
-@if(navService.navIsVisible()){
-<div class="h-screen w-full bg-transparent/10 fixed top-0 right-0 z-10">
+<div
+  [ngClass]="{ hidden: !navService.navIsVisible() }"
+  class="h-screen w-full bg-transparent/10 fixed top-0 right-0 z-10"
+>
   <nav
     class="h-full flex flex-col place-items-start gap-10 bg-bgcolor-light shadow w-full sm:w-[400px] fixed top-0 right-0 px-6 py-4 z-10"
   >
     <div class="w-full flex items-center justify-between sm:justify-end">
       <h2 class="text-xl uppercase text-link-dark sm:hidden">{{ appName }}</h2>
-      <button (click)="closeNav()" class="py-3">
+      <button (click)="closeNav()" class="py-4">
         <span class="material-symbols-outlined text-[26px]">{{
           closeIcon
         }}</span>
       </button>
     </div>
 
-    @if(headerItems.length){
-    <div class="w-full pb-12 flex flex-col gap-10 border-b border-black/5">
-      @for(headerItem of headerItems; track headerItem.href){
+    <div
+      [ngClass]="{ hidden: priorityNavItems.length === 0 }"
+      class="w-full pb-12 flex flex-col gap-10 border-b border-black/5"
+    >
+      @for(headerItem of priorityNavItems; track headerItem.href){
       <a
         [routerLink]="headerItem.href"
         class="flex gap-3 items-center opacity-80 capitalize w-fit"
@@ -29,12 +33,15 @@
       </a>
       }
     </div>
-    } @if(appNavItems.length){
-    <div class="w-full pb-12 flex flex-col gap-10 border-b border-black/5">
+
+    <div
+      [ngClass]="{ hidden: appNavItems.length - priorityNavItems.length === 0 }"
+      class="w-full pb-12 flex flex-col gap-10 border-b border-black/5"
+    >
       @for(navItem of appNavItems; track navItem.href){
       <a
         [routerLink]="navItem.href"
-        class="flex gap-3 items-center opacity-80 capitalize w-fit"
+        class="flex gap-3 items-center opacity-80 w-fit"
         routerLinkActive="text-link-dark font-semibold opacity-100"
         [routerLinkActiveOptions]="{ exact: true }"
         (click)="closeNav()"
@@ -46,8 +53,11 @@
       </a>
       }
     </div>
-    } @if(isAuthenticated){
-    <div class="flex-1 flex flex-col justify-end">
+
+    <div
+      [ngClass]="{ hidden: !isAuthenticated }"
+      class="flex-1 flex flex-col justify-end"
+    >
       <button
         (click)="handleLogout()"
         class="py-3 flex place-self-center gap-3"
@@ -56,14 +66,32 @@
         <span>Logout</span>
       </button>
     </div>
-    }
   </nav>
 </div>
-} @if(!navService.navIsVisible() && appNavItems.length>0){<button
+
+<button
   (click)="openNav()"
-  class="w-full text-md flex justify-end"
+  [ngClass]="{ hidden: navService.navIsVisible() }"
+  class="w-full text-md flex justify-end sm:hidden"
 >
   <span class="material-symbols-outlined text-[24px] hover:text-link-dark">{{
     appDrawerIcon
-  }}</span></button
->}
+  }}</span>
+</button>
+
+<div class="hidden items-center gap-8 sm:flex">
+  @for(navItem of appNavItems; track navItem.href){
+  <a
+    [routerLink]="navItem.href"
+    class="flex gap-3 items-center opacity-80 w-fit"
+    routerLinkActive="text-link-dark font-semibold opacity-100"
+    [routerLinkActiveOptions]="{ exact: true }"
+    (click)="closeNav()"
+  >
+    <span class="material-symbols-outlined text-[16px]">{{
+      navItem.icon
+    }}</span>
+    <span class="">{{ navItem.label }}</span>
+  </a>
+  }
+</div>

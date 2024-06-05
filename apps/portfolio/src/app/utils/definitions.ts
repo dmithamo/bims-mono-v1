@@ -1,5 +1,14 @@
 export type TBioData = {
-  username: string; // gh handle
-  fullname: string;
-  description: string; // gh tagline
+  name: string;
+  tagline: string;
+  workedSinceDate: Date;
+  ghUsername: string;
+  linkedInUsername: string;
+};
+
+export const ROUTES = {
+  aboutMe: '',
+  experience: 'experience',
+  cv: 'cv',
+  projects: 'projects',
 };

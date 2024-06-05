@@ -8,6 +8,7 @@ export type AppNavItem = {
   href: string;
   label: string;
   icon: AppIcon;
+  isPriority?: boolean;
 };
 
 @Component({
@@ -20,15 +21,21 @@ export class AppNavComponent {
   @Input({ required: true }) appName: string = '';
   @Input({ required: true }) appNavItems: AppNavItem[] = [];
 
+  priorityNavItems: AppNavItem[] = this.appNavItems.filter(
+    (appNavItem) => appNavItem.isPriority
+  );
+
   closeIcon = AppIcon.close;
   navDrawerIcon = AppIcon.apps;
   isAuthenticated = false;
+  appDrawerIcon = AppIcon.menu;
 
   constructor(protected navService: NavService, private router: Router) {}
 
   openNav() {
     this.navService.toggleNavIsVisible({ isOpen: false });
   }
+
   closeNav() {
     this.navService.toggleNavIsVisible({ isOpen: true });
   }
@@ -37,7 +44,4 @@ export class AppNavComponent {
     this.closeNav();
     this.router.navigate(['/']);
   }
-
-  appDrawerIcon = AppIcon.menu;
-  headerItems: AppNavItem[] = [];
 }
