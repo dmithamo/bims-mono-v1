@@ -7,6 +7,7 @@ import {
   TempPageComponent,
   type AppNavItem,
   AppLogoComponent,
+  AppHeaderComponent,
 } from '@bims/bims-ui';
 
 @Component({
@@ -16,6 +17,7 @@ import {
     AppLayoutComponent,
     AppLogoComponent,
     RouterModule,
+    AppHeaderComponent,
   ],
   selector: 'bims-root',
   templateUrl: './app.component.html',

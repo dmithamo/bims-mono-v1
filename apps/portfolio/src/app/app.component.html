@@ -1,4 +1,8 @@
-<bims-app-layout [appName]="title" [appNavItems]="appNavItems">
-  <bims-app-logo [appName]="title" />
-  <router-outlet body />
+<bims-app-layout>
+  <bims-app-header
+    [appName]="title"
+    [appNavItems]="appNavItems"
+    ngProjectAs="layout-header"
+  />
+  <router-outlet ngProjectAs="layout-body" />
 </bims-app-layout>

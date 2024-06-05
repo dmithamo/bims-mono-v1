@@ -1,14 +1,17 @@
 <header
   class="h-14 flex items-center justify-between bg-bgcolor-light w-full px-6 shadow"
 >
-  <a routerLink="/">
-    <ng-content select="[app-logo]" />
+  <a class="w-fit" routerLink="/">
+    <bims-app-logo [appName]="appName" />
   </a>
 
-  <div class="flex items-center gap-8 select-none">
+  <div class="w-fit flex items-center gap-8 select-none">
     @if(onSearch){
     <span class="material-symbols-outlined cursor-pointer hover:text-link-dark"
       >search</span
-    >}
+    >} @if (appNavItems.length >0){<bims-app-nav
+      [appName]="appName"
+      [appNavItems]="appNavItems"
+    />}
   </div>
 </header>

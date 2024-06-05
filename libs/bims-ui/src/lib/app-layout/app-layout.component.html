@@ -1,11 +1,7 @@
 <div class="h-screen flex flex-col bg-white text-primary scroll-m-0">
-  <bims-app-header [appName]="appName">
-    <ng-content app-logo></ng-content>
-  </bims-app-header>
+  <ng-content select="layout-header"></ng-content>
 
   <div class="flex-1 p-2">
-    <ng-content select="[body]"></ng-content>
+    <ng-content select="layout-body"></ng-content>
   </div>
-
-  <bims-app-nav [appName]="appName" [appNavItems]="appNavItems" />
 </div>

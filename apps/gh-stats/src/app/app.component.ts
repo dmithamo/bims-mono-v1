@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {
+  AppHeaderComponent,
   AppLayoutComponent,
   AppLogoComponent,
   type AppNavItem,
@@ -14,11 +15,12 @@ import {
     TempPageComponent,
     AppLogoComponent,
     RouterModule,
+    AppHeaderComponent,
   ],
   selector: 'bims-root',
   templateUrl: './app.component.html',
 })
 export class AppComponent {
   title = 'GH Stats';
-  navItems: AppNavItem[] = [];
+  appNavItems: AppNavItem[] = [];
 }

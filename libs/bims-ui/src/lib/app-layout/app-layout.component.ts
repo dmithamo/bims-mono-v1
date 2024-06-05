@@ -9,7 +9,4 @@ import { AppNavComponent, AppNavItem } from '../app-nav/app-nav.component';
   imports: [CommonModule, AppHeaderComponent, AppNavComponent],
   templateUrl: './app-layout.component.html',
 })
-export class AppLayoutComponent {
-  @Input({ required: true }) appName: string = '';
-  @Input({ required: true }) appNavItems: AppNavItem[] = [];
-}
+export class AppLayoutComponent {}
