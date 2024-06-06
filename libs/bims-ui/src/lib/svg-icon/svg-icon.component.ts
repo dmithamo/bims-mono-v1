@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { AppIcon, AppIconSize } from '../definitions';
+import { AppIcon, AppIconSize } from '../../utils/definitions';
 
 @Component({
   selector: 'bims-svg-icon',

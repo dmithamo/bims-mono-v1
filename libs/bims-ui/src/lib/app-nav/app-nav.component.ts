@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
-import { AppIcon } from '../definitions';
+import { AppIcon } from '../../utils/definitions';
 import { NavService } from '../services/nav.service';
 
 export type AppNavItem = {

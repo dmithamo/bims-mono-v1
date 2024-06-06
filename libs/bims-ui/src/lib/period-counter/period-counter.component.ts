@@ -3,20 +3,14 @@ import {
   computed,
   effect,
   input,
-  Input,
   OnInit,
   Signal,
   signal,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { periodCalculator } from '../../utils/period-calculator';
-import { TClockSize, TPeriodBtnDates } from '../definitions';
+import { TClockSize, TPeriodBtnDates } from '../../utils/definitions';
 import { PeriodWithLabelComponent } from '../period-with-label/period-with-label.component';
-
-interface TPeriodWithLabel {
-  amount: number;
-  label: string;
-}
 
 @Component({
   selector: 'bims-period-counter',

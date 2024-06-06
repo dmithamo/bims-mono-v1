@@ -1,4 +1,4 @@
-import { TPeriodBtnDates } from '@bims/bims-ui';
+import { TPeriodBtnDates } from './definitions';
 import { padWithZero } from './num-format';
 
 const MILLIS_IN_A_YEAR = 12 * 30.44 * 24 * 60 * 60 * 1000;
