@@ -12,4 +12,6 @@ export class PeriodWithLabelComponent {
     amount: string;
     label: string;
   }>();
+
+  isMuted = input<boolean>(false);
 }

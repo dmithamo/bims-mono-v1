@@ -1,11 +1,64 @@
-<p class="font-bold text-lg text">Hello world!</p>
-<p>I am</p>
-<h2 class="bg-bgcolor font-bold text-link-dark text-4xl">{{ bioData.name }}</h2>
-<p>and this is my website 😎</p>
-<p>There are many like it but this one is mine</p>
+<div
+  class="flex flex-col justify-center gap-4 sm:flex-row h-full w-full overflow-hidden"
+>
+  <p class="font-bold text-lg">Hello world!</p>
 
-<p>I am a</p>
-<h2 class="bg-bgcolor font-bold text-2xl">{{ bioData.tagline }}</h2>
-<p>by profession, and I have accrued</p>
-<bims-period-counter [startDate]="bioData.workedSinceDate" />
-<p>of experience thus far</p>
+  <div class="w-full">
+    <p class="text-muted text-xs">I am</p>
+    <h2 class="bg-bgcolor font-bold text-link-dark text-2xl">
+      {{ bioData.name }}
+    </h2>
+    <p class="text-muted text-xs">and this is my website 😎</p>
+    <p class="text-muted text-xs">
+      There are many like it but this one is mine
+    </p>
+  </div>
+
+  <div class="w-full">
+    <p class="text-muted text-xs">I am a</p>
+    <h2 class="bg-bgcolor font-bold text-xl">{{ bioData.tagline }}</h2>
+    <p class="text-muted text-xs">by profession</p>
+  </div>
+
+  <img
+    [height]="423 / 2"
+    [priority]="true"
+    [width]="420 / 2"
+    alt="memoji"
+    class="blur-xs rounded-b-full mx-auto"
+    ngSrc="assets/img/memoji.jpeg"
+  />
+
+  <div class="w-full">
+    <p class="text-muted text-xs">I have accrued</p>
+    <div class="w-full mx-auto">
+      <bims-period-counter [startDate]="bioData.workedSinceDate" />
+    </div>
+
+    <p class="text-muted text-xs">of experience thus far</p>
+  </div>
+
+  <div class="w-full p-2">
+    <p class="text-muted text-xs">I am on</p>
+    <div class="flex items-center justify-between">
+      <a
+        class="flex items-center gap-1"
+        href="https://github.com/dmithamo"
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        <span>G</span>
+        <span>dmithamo</span>
+      </a>
+      <a
+        class="flex items-center gap-1"
+        href="https://github.com/dmithamo"
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        <span>L</span>
+        <span>dennis-mithamo</span>
+      </a>
+    </div>
+  </div>
+</div>

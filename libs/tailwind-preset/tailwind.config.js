@@ -17,6 +17,9 @@ module.exports = {
           DEFAULT: '#fffff',
           dark: '#fffff',
         },
+        muted: {
+          DEFAULT: '#00000060',
+        },
       },
       fontSize: {
         base: '12px',

@@ -29,11 +29,11 @@ export function periodCalculator({
 
   return {
     years: {
-      amount: padWithZero(years),
+      amount: String(years),
       label: 'years',
     },
     months: {
-      amount: padWithZero(months),
+      amount: String(months),
       label: 'months',
     },
     days: {

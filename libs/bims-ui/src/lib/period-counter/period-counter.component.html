@@ -1,12 +1,33 @@
-<div class="flex items-center gap-4">
-  <bims-clock />
+<div class="w-full">
+  <div class="w-full grid grid-cols-3 place-items-center">
+    <div>
+      <bims-period-with-label [period]="periodElapsed().years" />
+      <bims-period-with-label [period]="periodElapsed().months" />
+    </div>
 
-  <div class="flex items-center gap-4">
-    <bims-period-with-label [period]="periodElapsed().years" />
-    <bims-period-with-label [period]="periodElapsed().months" />
-    <bims-period-with-label [period]="periodElapsed().days" />
-    <bims-period-with-label [period]="periodElapsed().hours" />
-    <bims-period-with-label [period]="periodElapsed().minutes" />
-    <bims-period-with-label [period]="periodElapsed().seconds" />
+    <div
+      [ngClass]="clockSizeClass()"
+      class="p-4 rounded-full border-4 border-black bg-black bg-clip-content relative"
+    ></div>
+
+    <div class="grid grid-cols-2">
+      <bims-period-with-label
+        [isMuted]="true"
+        [period]="periodElapsed().days"
+      />
+      <bims-period-with-label
+        [isMuted]="true"
+        [period]="periodElapsed().hours"
+      />
+
+      <bims-period-with-label
+        [isMuted]="true"
+        [period]="periodElapsed().minutes"
+      />
+      <bims-period-with-label
+        [isMuted]="true"
+        [period]="periodElapsed().seconds"
+      />
+    </div>
   </div>
 </div>

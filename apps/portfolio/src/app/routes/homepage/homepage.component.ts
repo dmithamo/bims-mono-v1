@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { PeriodCounterComponent, TempPageComponent } from '@bims/bims-ui';
 import { TBioData } from '../../utils/definitions';
@@ -6,7 +6,12 @@ import { TBioData } from '../../utils/definitions';
 @Component({
   selector: 'bims-homepage',
   standalone: true,
-  imports: [CommonModule, TempPageComponent, PeriodCounterComponent],
+  imports: [
+    CommonModule,
+    TempPageComponent,
+    PeriodCounterComponent,
+    NgOptimizedImage,
+  ],
   templateUrl: './homepage.component.html',
 })
 export class HomepageComponent {
