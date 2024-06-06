@@ -39,7 +39,7 @@ export class PeriodCounterComponent implements OnInit {
   clockSizeClass = computed<string>(() => {
     switch (this.size()) {
       default:
-        return 'w-[50px] h-[50px]';
+        return 'w-[100px] h-[100px]';
     }
   });
   protected readonly Object = Object;

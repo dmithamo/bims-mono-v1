@@ -1,11 +1,11 @@
 <div
-  [ngClass]="{ 'opacity-80 scale-50': isMuted() }"
-  class="flex items-center gap-1 font-bold"
+  [ngClass]="{ 'text-muted scale-50': isMuted() }"
+  class="w-[50px] flex items-baseline justify-start font-bold"
 >
-  <p class="text-lg">
+  <p class="text-xl">
     {{ period().amount }}
   </p>
-  <p class="w-full uppercase text-md]">
+  <p class="uppercase text-[0.85em]">
     {{ period().label }}
   </p>
 </div>

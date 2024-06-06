@@ -1,16 +1,10 @@
 <div class="w-full">
-  <div class="w-full grid grid-cols-3 place-items-center">
-    <div>
+  <div class="w-full flex justify-between items-center">
+    <div class="flex flex-col items-start">
       <bims-period-with-label [period]="periodElapsed().years" />
       <bims-period-with-label [period]="periodElapsed().months" />
     </div>
-
-    <div
-      [ngClass]="clockSizeClass()"
-      class="p-4 rounded-full border-4 border-black bg-black bg-clip-content relative"
-    ></div>
-
-    <div class="grid grid-cols-2">
+    <div class="flex justify-start">
       <bims-period-with-label
         [isMuted]="true"
         [period]="periodElapsed().days"
@@ -19,7 +13,6 @@
         [isMuted]="true"
         [period]="periodElapsed().hours"
       />
-
       <bims-period-with-label
         [isMuted]="true"
         [period]="periodElapsed().minutes"
