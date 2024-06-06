@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 import { periodCalculator } from '../../utils/period-calculator';
 import { TPeriodBtnDates } from '../definitions';
 import { PeriodWithLabelComponent } from '../period-with-label/period-with-label.component';
+import { ClockComponent } from '../clock/clock.component';
 
 interface TPeriodWithLabel {
   amount: number;
@@ -21,7 +22,7 @@ interface TPeriodWithLabel {
 @Component({
   selector: 'bims-period-counter',
   standalone: true,
-  imports: [CommonModule, PeriodWithLabelComponent],
+  imports: [CommonModule, PeriodWithLabelComponent, ClockComponent],
   templateUrl: './period-counter.component.html',
 })
 export class PeriodCounterComponent implements OnInit {

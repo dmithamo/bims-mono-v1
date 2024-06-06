@@ -39,3 +39,9 @@ export interface TPeriodBtnDates {
   minutes: TPeriodWithLabel;
   seconds: TPeriodWithLabel;
 }
+
+export enum TClockSize {
+  small,
+  medium,
+  large,
+}

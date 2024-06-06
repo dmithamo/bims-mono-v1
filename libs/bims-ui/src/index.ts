@@ -8,3 +8,4 @@ export * from './lib/temp-page/temp-page.component';
 export * from './lib/app-logo/app-logo.component';
 export * from './lib/period-counter/period-counter.component';
 export * from './lib/period-with-label/period-with-label.component';
+export * from './lib/clock/clock.component';
