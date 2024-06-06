@@ -4,10 +4,30 @@
     center
   </p>
 
-  <div>
+  <div class="flex items-center gap-4">
     <div class="grid grid-rows-2">
-      <p>Period number</p>
-      <p>Period label</p>
+      <p class="font-bold text-4xl">{{ periodElapsed().years.amount }}</p>
+      <p class="uppercase opacity-50">{{ periodElapsed().years.label }}</p>
+    </div>
+    <div class="grid grid-rows-2">
+      <p class="font-bold text-4xl">{{ periodElapsed().months.amount }}</p>
+      <p class="uppercase opacity-50">{{ periodElapsed().months.label }}</p>
+    </div>
+    <div class="grid grid-rows-2">
+      <p class="font-bold text-4xl">{{ periodElapsed().days.amount }}</p>
+      <p class="uppercase opacity-50">{{ periodElapsed().days.label }}</p>
+    </div>
+    <div class="grid grid-rows-2">
+      <p class="font-bold text-4xl">{{ periodElapsed().hours.amount }}</p>
+      <p class="uppercase opacity-50">{{ periodElapsed().hours.label }}</p>
+    </div>
+    <div class="grid grid-rows-2">
+      <p class="font-bold text-4xl">{{ periodElapsed().minutes.amount }}</p>
+      <p class="uppercase opacity-50">{{ periodElapsed().minutes.label }}</p>
+    </div>
+    <div class="grid grid-rows-2">
+      <p class="font-bold text-4xl">{{ periodElapsed().seconds.amount }}</p>
+      <p class="uppercase opacity-50">{{ periodElapsed().seconds.label }}</p>
     </div>
   </div>
 </div>

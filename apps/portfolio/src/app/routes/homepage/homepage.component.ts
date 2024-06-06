@@ -13,7 +13,7 @@ export class HomepageComponent {
   bioData: TBioData = {
     name: 'Dennis Mithamo',
     tagline: 'Web developer',
-    workedSinceDate: new Date('2018-11-01'),
+    workedSinceDate: new Date('2018-11-05T05:00:00.000Z'),
     ghUsername: 'dmithamo',
     linkedInUsername: 'dennis-mithamo',
     profilePicHref: '',

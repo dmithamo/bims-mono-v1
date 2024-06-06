@@ -25,3 +25,17 @@ export enum AppIconSize {
   default = 'default',
   small = 'small',
 }
+
+export interface TPeriodWithLabel {
+  amount: number;
+  label: string;
+}
+
+export interface TPeriodBtnDates {
+  years: TPeriodWithLabel;
+  months: TPeriodWithLabel;
+  days: TPeriodWithLabel;
+  hours: TPeriodWithLabel;
+  minutes: TPeriodWithLabel;
+  seconds: TPeriodWithLabel;
+}
