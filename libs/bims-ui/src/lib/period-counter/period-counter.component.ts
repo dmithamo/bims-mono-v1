@@ -11,6 +11,7 @@ import {
 import { CommonModule } from '@angular/common';
 import { periodCalculator } from '../../utils/period-calculator';
 import { TPeriodBtnDates } from '../definitions';
+import { PeriodWithLabelComponent } from '../period-with-label/period-with-label.component';
 
 interface TPeriodWithLabel {
   amount: number;
@@ -20,7 +21,7 @@ interface TPeriodWithLabel {
 @Component({
   selector: 'bims-period-counter',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, PeriodWithLabelComponent],
   templateUrl: './period-counter.component.html',
 })
 export class PeriodCounterComponent implements OnInit {
@@ -29,6 +30,8 @@ export class PeriodCounterComponent implements OnInit {
   currentDate = signal<Date>(new Date());
 
   periodLimit = computed<Date>(() => this.endDate() || this.currentDate());
+  dateString = computed(() => this.currentDate().getDate());
+  timeString = computed(() => this.currentDate().getTime());
 
   periodElapsed: Signal<TPeriodBtnDates> = computed(() =>
     periodCalculator({
@@ -43,7 +46,7 @@ export class PeriodCounterComponent implements OnInit {
 
   ngOnInit() {
     setInterval(() => {
-      this.currentDate.update(() => new Date());
+      this.currentDate.set(new Date());
     }, 1000);
   }
 }

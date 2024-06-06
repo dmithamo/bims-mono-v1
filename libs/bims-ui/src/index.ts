@@ -7,3 +7,4 @@ export * from './lib/not-found-page/not-found-page.component';
 export * from './lib/temp-page/temp-page.component';
 export * from './lib/app-logo/app-logo.component';
 export * from './lib/period-counter/period-counter.component';
+export * from './lib/period-with-label/period-with-label.component';

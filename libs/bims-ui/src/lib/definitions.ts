@@ -27,7 +27,7 @@ export enum AppIconSize {
 }
 
 export interface TPeriodWithLabel {
-  amount: number;
+  amount: string;
   label: string;
 }
 

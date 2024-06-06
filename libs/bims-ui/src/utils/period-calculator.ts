@@ -1,4 +1,5 @@
 import { TPeriodBtnDates } from '@bims/bims-ui';
+import { padWithZero } from './num-format';
 
 const MILLIS_IN_A_YEAR = 12 * 30.44 * 24 * 60 * 60 * 1000;
 
@@ -28,27 +29,27 @@ export function periodCalculator({
 
   return {
     years: {
-      amount: years,
+      amount: padWithZero(years),
       label: 'years',
     },
     months: {
-      amount: months,
+      amount: padWithZero(months),
       label: 'months',
     },
     days: {
-      amount: days,
+      amount: padWithZero(days),
       label: 'days',
     },
     hours: {
-      amount: hours,
+      amount: padWithZero(hours),
       label: 'hours',
     },
     minutes: {
-      amount: minutes,
+      amount: padWithZero(minutes),
       label: 'minutes',
     },
     seconds: {
-      amount: seconds,
+      amount: padWithZero(seconds),
       label: 'seconds',
     },
   };
