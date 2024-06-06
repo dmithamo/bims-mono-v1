@@ -18,7 +18,7 @@ module.exports = {
           dark: '#fffff',
         },
         muted: {
-          DEFAULT: '#00000060',
+          DEFAULT: '#00000075',
         },
       },
       fontSize: {
