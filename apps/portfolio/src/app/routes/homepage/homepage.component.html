@@ -1,6 +1,8 @@
-<div class="w-full h-full flex flex-col items-center justify-around">
-  <div class="w-full flex flex-col sm:flex-row items-center justify-around">
-    <div class="flex flex-col gap-6 items-start justify-start">
+<div class="w-full h-full flex flex-col items-start justify-evenly">
+  <div
+    class="w-full flex flex-col sm:flex-row items-start sm:items-center justify-between"
+  >
+    <div class="w-full flex flex-col gap-6 items-start justify-start">
       <p class="font-bold text-xl">Hello world!</p>
 
       <div class="w-full">
@@ -8,43 +10,56 @@
         <h2 class="bg-bgcolor font-bold text-link-dark text-2xl">
           {{ bioData.name }}
         </h2>
-        <p class="text-muted text-xs">and this is my website 😎</p>
+        <p class="text-muted text-xs">and this is my website.</p>
         <p class="text-muted text-xs">
-          There are many like it but this one is mine
+          There are many like it but this one is mine 😎
         </p>
       </div>
 
       <div class="w-full">
         <p class="text-muted text-xs">I am a</p>
         <h2 class="bg-bgcolor font-bold text-xl">{{ bioData.tagline }}</h2>
-        <p class="text-muted text-xs">by profession</p>
+        <p class="text-muted text-xs">by profession.</p>
       </div>
 
       <div class="w-full bg-white relative">
-        <div class="absolute right-[10px] bottom-[-6px] opacity-10">
+        <p class="text-muted text-xs">I have accumulated</p>
+        <bims-period-counter [startDate]="bioData.workedSinceDate" />
+        <div class="absolute right-[1px] bottom-[-6px] opacity-10">
           <div
             class="w-[100px] h-[100px] p-10 rounded-full border-4 border-black bg-black bg-clip-content"
           ></div>
         </div>
-        <p class="text-muted text-xs">I have accumulated</p>
-        <div class="w-full">
-          <bims-period-counter [startDate]="bioData.workedSinceDate" />
-        </div>
-
-        <p class="text-muted text-xs">of experience thus far</p>
+        <p class="text-muted text-xs">of experience thus far.</p>
       </div>
 
-      <div class="w-full">
+      <h3 class="w-3/4">
+        <a
+          class="text-link-dark underline underline-offset-2 pr-1"
+          routerLink="/experience"
+          >Here's</a
+        >
+        what I have been up to in that time.
+      </h3>
+
+      <div class="w-3/4">
         <p class="text-muted text-xs">I am on</p>
-        <div class="flex items-center justify-between">
+        <div class="w-full flex items-center justify-between py-1">
           <a
             class="flex items-center gap-1"
             href="https://github.com/dmithamo"
             rel="noreferrer noopener"
             target="_blank"
           >
-            <span>G</span>
-            <span class="underline underline-offset-2">dmithamo</span>
+            <img
+              [height]="512 / 32"
+              [width]="512 / 32"
+              alt="github"
+              ngSrc="assets/img/github.png"
+            />
+            <span class="text-link-dark underline underline-offset-2"
+              >dmithamo</span
+            >
           </a>
           <a
             class="flex items-center gap-1"
@@ -52,14 +67,32 @@
             rel="noreferrer noopener"
             target="_blank"
           >
-            <span>L</span>
-            <span class="underline underline-offset-2">dennis-mithamo</span>
+            <img
+              [height]="512 / 32"
+              [width]="512 / 32"
+              alt="linkedin"
+              ngSrc="assets/img/linkedin.png"
+            />
+            <span class="text-link-dark underline underline-offset-2"
+              >dennis-mithamo</span
+            >
           </a>
         </div>
+        <p class="text-muted text-xs">
+          amongst
+          <a
+            class="px-1 text-link-dark"
+            href="https://thoughts.dmithamo.dev"
+            rel="noreferrer noopener"
+            target="_blank"
+            >other</a
+          >
+          places.
+        </p>
       </div>
     </div>
 
-    <div class="p-2">
+    <div class="p-2 w-full flex justify-center items-end">
       <img
         [height]="423 / 2"
         [priority]="true"
